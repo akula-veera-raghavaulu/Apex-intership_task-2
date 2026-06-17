@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Form & To-Do List</title>
+    <link rel="stylesheet" href="task_2.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h2>My Website</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Tasks</a></li>
+        </ul>
+    </nav>
+
+    <!-- Grid Layout -->
+    <div class="container">
+
+        <!-- Contact Form -->
+        <section class="form-section">
+            <h2>Contact Form</h2>
+
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Enter Name">
+                <span class="error" id="nameError"></span>
+
+                <input type="email" id="email" placeholder="Enter Email">
+                <span class="error" id="emailError"></span>
+
+                <textarea id="message" placeholder="Enter Message"></textarea>
+                <span class="error" id="messageError"></span>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- To-Do List -->
+        <section class="todo-section">
+            <h2>To-Do List</h2>
+
+            <div class="todo-input">
+                <input type="text" id="taskInput" placeholder="Add Task">
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <ul id="taskList"></ul>
+        </section>
+
+    </div>
+
+    <script src="task_2.js"></script>
+</body>
+</html>
