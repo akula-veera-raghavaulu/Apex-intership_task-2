@@ -3,56 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Contact Form & To-Do List</title>
+    <title>Contact & Task Manager</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="task_2.css">
+
+    <style>
+        .navbar p{
+            font-family: "Noto Sans Telugu", sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar">
-        <h2>My Website</h2>
+
+        <p>నా వెబ్సైట్</p>
+
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Tasks</a></li>
         </ul>
+
     </nav>
 
-    <!-- Grid Layout -->
     <div class="container">
 
         <!-- Contact Form -->
-        <section class="form-section">
+        <section class="card">
+
             <h2>Contact Form</h2>
 
             <form id="contactForm">
-                <input type="text" id="name" placeholder="Enter Name">
+
+                <input type="text" id="name" placeholder="Your Name">
                 <span class="error" id="nameError"></span>
 
-                <input type="email" id="email" placeholder="Enter Email">
+                <input type="email" id="email" placeholder="Your Email">
                 <span class="error" id="emailError"></span>
 
-                <textarea id="message" placeholder="Enter Message"></textarea>
+                <input type="tel" id="phone" placeholder="Your Phone Number">
+                <span class="error" id="phoneError"></span>
+
+                <div class="gender-group">
+
+                    <label>Gender</label>
+
+                    <div class="gender-options">
+
+                        <label>
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+
+                    </div>
+
+                    <span class="error" id="genderError"></span>
+
+                </div>
+
+                <textarea id="message" placeholder="Your Message"></textarea>
                 <span class="error" id="messageError"></span>
 
-                <button type="submit">Submit</button>
+                <button type="submit">Send Message</button>
+
             </form>
+
         </section>
 
         <!-- To-Do List -->
-        <section class="todo-section">
+        <section class="card">
+
             <h2>To-Do List</h2>
 
             <div class="todo-input">
-                <input type="text" id="taskInput" placeholder="Add Task">
-                <button onclick="addTask()">Add</button>
+                <input type="text" id="taskInput" placeholder="Enter a task...">
+                <button type="button" onclick="addTask()">Add</button>
             </div>
 
             <ul id="taskList"></ul>
+
         </section>
 
     </div>
 
     <script src="task_2.js"></script>
+
 </body>
 </html>
